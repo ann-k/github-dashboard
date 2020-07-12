@@ -20,7 +20,7 @@ function Home(props) {
 
   function handleSearch(value) {
     setPreloader(true)
-    setUserQuery(value)
+    setUserQuery(value || defaultQuery)
     setResult({repos: []})
     sessionStorage.setItem('query', value)
     setCurrentPage(1)
